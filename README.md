@@ -7,8 +7,10 @@ $ cd filesystem
 $ mvn spring-boot:run
 ~~~
 
-Note, when adding drives, don't add a *path*. For example ...
+Note, when adding drives, don't use a *path*. For example ...
 
 ~~~
 touch drive c
+touch folder public c
+touch documents c/public
 ~~~
