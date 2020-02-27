@@ -31,7 +31,9 @@ public class FilesystemApplication implements CommandLineRunner {
 				String line = reader.readLine();
 				String argList[] = line.split(" ");
 				if ("touch".equals(argList[0])) {
-					fs.create(stringToEntityType(argList[1]), argList[2], ("b".equals(argList[3])) ? "" : argList[3]);
+					String path = ("drive".equals(argList[1]) && argList.length == 3) ? "" : argList[3];
+
+					fs.create(stringToEntityType(argList[1]), argList[2], path);
 				} else if ("rm".equals(argList[0])) {
 					fs.delete(argList[1]);
 				} else if ("mv".equals(argList[0])) {
