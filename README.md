@@ -10,5 +10,5 @@ $ mvn spring-boot:run
 Note, when adding drives, don't add a *path*. For example ...
 
 ~~~
-touch c
+touch drive c
 ~~~
